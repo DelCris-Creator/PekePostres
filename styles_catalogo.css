@@ -1,0 +1,104 @@
+        /* Estilos base */
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px; /* Reducimos el espacio entre imágenes */
+            padding: 10px;
+            justify-content: center;
+        }
+        
+        .item {
+            cursor: pointer;
+            width: calc(20% - 8px); /* 5 columnas en móvil */
+            min-width: 60px; /* Ancho mínimo para que no se hagan muy pequeñas */
+            aspect-ratio: 1/1; /* Mantenemos relación cuadrada */
+            margin-bottom: 0;
+        }
+        
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+        
+        .item img:hover {
+            transform: scale(1.05);
+        }
+        
+        .item p {
+            display: none; /* Ocultamos el texto en móvil */
+        }
+        
+        /* Lightbox (igual que antes) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .lightbox-content {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .lightbox img {
+            max-width: 95%;
+            max-height: 80vh;
+        }
+        
+        .cerrar {
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        
+        body h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-family: 'Pacifico', cursive;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        /* Media Queries para adaptabilidad */
+        @media (min-width: 480px) {
+            .item {
+                width: calc(16.666% - 8px); /* 6 columnas cuando hay más espacio */
+            }
+        }
+        
+        @media (min-width: 600px) {
+            .catalogo {
+                gap: 12px;
+                padding: 15px;
+            }
+            
+            .item {
+                width: calc(14.285% - 12px); /* 7 columnas en tablets */
+            }
+        }
+        
+        @media (min-width: 900px) {
+            .item {
+                width: calc(10% - 12px); /* 10 columnas en pantallas grandes */
+            }
+            
+            .item p {
+                display: block; /* Mostramos texto en desktop */
+                font-size: 0.8em;
+                margin: 5px 0 0;
+                text-align: center;
+            }
+        }

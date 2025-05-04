@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PekePostres - MiniCakes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/00016.ico">
+</head>
+<body>
+    <header>
+        <img src="images/00016.png" id="mi-imagen" alt="Logo de PekePostres">
+        <h1>MiniCakes</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tortas.html">Tortas</a></li>
+            <li><a href="cupcakes.html">Cupcakes</a></li>
+            <li><a href="minicakes.html">Minicakes</a></li>
+            <li><a href="donuts.html">MiniDonuts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="productos">
+            <div class="product">
+                <div class="product-inner">
+                    <div class="front"> <!-- Efecto frente -->
+                        <img src="images/0004.jpg" alt="Producto 4">
+                        <p class="nombre-producto">MiniCakes Personal</p>
+                    </div>
+                    <div class="back"> <!-- Efecto detrás -->
+                        <p class="descripcion">Sabor a vainilla, chocolate, naranja entre
+                        otros.10 cm de diámetro por 10 cm de alto aproximadamente. Relleno
+                        de arequipe o chocolate con un peso de 400 gr aproximadamente rinde
+                        para 4 porciones.
+                        </p>
+                        <p class="precio">A partir de $10.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <div class="front"> <!-- Efecto frente -->
+                        <img src="images/0005.jpg" alt="Producto 5">
+                        <p class="nombre-producto">MiniCakes</p>
+                    </div>
+                    <div class="back"> <!-- Efecto detrás -->
+                        <p class="descripcion">Sabor a vainilla, chocolate, naranja entre
+                        otros.10 cm de diámetro por 10 cm de alto aproximadamente. Relleno
+                        de arequipe o chocolate con un peso de 800 gr aproximadamente rinde
+                        para 8 porciones.
+                        </p>
+                        <p class="precio">A partir de $13.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-inner">
+                    <div class="front"> <!-- Efecto frente -->
+                        <img src="images/0006.jpg" alt="Producto 6">
+                        <p class="nombre-producto">Choco Quesillo</p>
+                    </div>
+                    <div class="back"> <!-- Efecto detrás -->
+                        <p class="descripcion">10 cm de diametro por 8cm de alto aproximadamente
+                        con peso de 450gr, rinde para 4 porciones.
+                        </p>
+                        <p class="precio">A partir de $12</p>
+                        <p class="descripcion">12 cm de diametro por 8cm de alto aproximadamente
+                        con peso de 650gr, rinde para 8 porciones.
+                        <p class="precio">A partir de $15</p>
+                    </div>
+                </div>
+            </div>        
+        </section>
+    </main>
+
+    <a href="https://wa.me/584123639648" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <footer>
+        <div class="contacto">
+            <div class="contacto-item">
+                <img src="images/00015.png" alt="WhatsApp Logo">
+                <p>+58-412-3639648</p>
+            </div>
+            <div class="contacto-item">
+                <img src="images/00014.png" alt="Email Logo">
+                <p>alimunoz.078@gmail.com</p>
+            </div>
+        </div>
+        <p class="derechos">&copy; 2023 PekePostres. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Crear corazones flotantes
+        const heartContainer = document.createElement('div');
+        heartContainer.classList.add('heart-container');
+        document.body.appendChild(heartContainer);
+
+        for (let i = 0; i < 10; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heartContainer.appendChild(heart);
+        }
+    </script>
+</body>
+</html>

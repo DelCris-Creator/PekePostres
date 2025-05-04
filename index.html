@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PekePostres - Día de las Madres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/00016.ico">
+</head>
+<body>
+        <!-- Banner de promoción -->
+        <div class="promo-banner" onclick="window.location.href='promocion.html'">
+            <span class="promo-text">¡Oferta Especial!<br>Día de las Madres</span>
+            <span class="promo-cta">CLIC AQUÍ</span>
+            <div class="promo-arrow">➤</div>
+        </div>
+        <!-- Fin de Banner de promoción -->
+    <header>
+        <img src="images/00016.png" id="mi-imagen" alt="Logo de PekePostres">
+        <h1>¡Celebra el Día de las Madres con PekePostres!</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tortas.html">Tortas</a></li>
+            <li><a href="cupcakes.html">Cupcakes</a></li>
+            <li><a href="donuts.html">MiniDonuts</a></li>
+            <li><a href="catalogo.html">Cátalogo</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="bienvenida">
+            <h2>¡Sorprende a mamá con nuestros deliciosos postres!</h2>
+            <p>Selecciona una categoría del menú para ver nuestros productos especiales para el Día de las Madres.</p>
+        </section>
+    </main>
+
+    <a href="https://wa.me/584123639648" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="contacto">
+            <div class="contacto-item">
+                <img src="images/00015.png" alt="WhatsApp Logo">
+                <p>+58-412-3639648</p>
+            </div>
+            <div class="contacto-item">
+                <img src="images/00014.png" alt="Email Logo">
+                <p>alimunoz.078@gmail.com</p>
+            </div>
+        </div>
+        <p class="derechos">&copy; 2023 PekePostres. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Crear corazones flotantes
+        const heartContainer = document.createElement('div');
+        heartContainer.classList.add('heart-container');
+        document.body.appendChild(heartContainer);
+
+        for (let i = 0; i < 10; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heartContainer.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
