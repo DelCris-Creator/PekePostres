@@ -418,24 +418,41 @@ body h1 {
         align-items: center;
         background-color: #ff4081;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        cursor: pointer; /* Manito que indica que es clickeable */
     }
     
     .promo-text {
-        display: none; /* Ocultamos el texto en móvil */
+        display: none;
     }
     
     .promo-cta {
-        display: none; /* Ocultamos el CTA en móvil */
+        display: none;
     }
     
     .promo-arrow {
-        display: none; /* Ocultamos la flecha */
+        display: none;
     }
     
-    /* Agregamos un corazón */
+    /* Texto centrado */
     .promo-banner::before {
         content: "PROMO MADRE";
-        font-size: 1rem;
+        font-size: 0.9  rem;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        line-height: 1.2;
+        padding: 5px;
+    }
+    
+    /* Mano que apunta hacia el centro */
+    .promo-banner::after {
+        content: "👉"; 
+        font-size: 2rem;
+        position: absolute;
+        top: 50%;
+        left: -30px; /* Posición fuera del círculo a la izquierda */
+        transform: translateY(-50%) rotate(0deg);
+        animation: point 1.5s infinite alternate; /* Animación opcional */
     }
     
     .promo-banner:hover {
@@ -443,6 +460,12 @@ body h1 {
         transform: scale(1.1);
         right: 10px;
         padding-right: 0;
+    }
+    
+    /* Animación opcional para el dedo */
+    @keyframes point {
+        0% { transform: translateY(-50%) translateX(0); }
+        100% { transform: translateY(-50%) translateX(-5px); }
     }
 }
 /* fin de estilos para el banner de promoción */
