@@ -176,9 +176,9 @@ footer {
     color: white;
     font-size: 30px;
     text-align: center;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -186,6 +186,7 @@ footer {
 .whatsapp-button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    
 }
 
 /* Animación de corazones flotantes */
@@ -322,7 +323,7 @@ footer {
     }
     
     header img {
-        max-width: 60px; /* Logo más pequeño */
+        max-width: 110px; /* Logo más pequeño */
         left: 10px;
     }
     
