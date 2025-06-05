@@ -1,13 +1,13 @@
-// Crear corazones flotantes
-const heartContainer = document.createElement('div');
-heartContainer.classList.add('heart-container');
-document.body.appendChild(heartContainer);
+// Crear corbatas flotantes
+const tieContainer = document.createElement('div');
+tieContainer.classList.add('tie-container');
+document.body.appendChild(tieContainer);
 
 for (let i = 0; i < 10; i++) {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.innerHTML = '❤️';
-    heartContainer.appendChild(heart);
+    const tie = document.createElement('div');
+    tie.classList.add('tie');
+    tie.innerHTML = '👔'; // Símbolo de corbata en lugar de corazón
+    tieContainer.appendChild(tie);
 }
 
 //document.getElementById('mi-imagen').style.filter = 'brightness(0) invert(1) hue-rotate(90deg)';
