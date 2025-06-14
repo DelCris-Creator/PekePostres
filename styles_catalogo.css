@@ -56,12 +56,27 @@
         }
         
         .cerrar {
-            color: white;
+            color: rgb(255, 255, 255);
             position: absolute;
             top: 15px;
             right: 20px;
-            font-size: 30px;
+            font-size: 30px; /* Aumentamos el tamaño */
+            font-weight: bold; /* Hacemos la fuente más gruesa */
             cursor: pointer;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5); /* Añadimos sombra para mejor contraste */
+            background: rgba(0,0,0,0.3); /* Fondo semitransparente */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; /* Forma circular */
+            transition: all 0.3s ease; /* Transición suave */
+        }
+
+        .cerrar:hover {
+            background: rgba(0,0,0,0.6); /* Fondo más oscuro al pasar el mouse */
+            transform: scale(1.1); /* Ligero aumento de tamaño */
         }
         
         body h1 {
