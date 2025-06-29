@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #e6f2ff; /* Azul claro en lugar de rosa claro */
+    background-color: #fff5f5; /* Fondo rosado claro */
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,9 +9,9 @@ body {
     min-height: 100vh;
 }
 
-/* Header (bloque azul en lugar de rosado) */
+/* Header (colores de payaso) */
 header {
-    background-color: #4682b4; /* Azul acero en lugar de rosa */
+    background: linear-gradient(135deg, #FF5252 0%, #FFEB3B 50%, #4CAF50 100%); /* Rojo, amarillo y verde */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -21,7 +21,7 @@ header {
     min-height: 80px;
 }
 
-/* Header img (logo de PekePostre) */
+/* Header img (logo) */
 header img { 
     max-width: 180px;
     height: auto;
@@ -31,22 +31,54 @@ header img {
     transform: translateY(-50%);
 }
 
-/* Tintado del logo en azul */
+/* Tintado del logo en colores infantiles con mejor contraste */
 #mi-imagen {
-  filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg) saturate(5);
+  filter: 
+    brightness(1.1) 
+    contrast(1.2)
+    drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
+  transition: filter 0.3s ease;
+}
+#mi-imagen:hover {
+  filter: 
+    brightness(1.2)
+    drop-shadow(3px 3px 6px rgba(0,0,0,0.5))
+    contrast(1.3)
+    hue-rotate(20deg);
 }
 
 /*Estilo y posicionamiento del h1*/
 header h1 {
     margin: 1;
     font-size: 2.5em;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Bubblegum Sans', cursive, sans-serif;
     padding: 0 20px;
+    color: #fff;
+    /*text-shadow: 
+        3px 3px 0 #000000,
+        5px 5px 0 #FF5722,
+        7px 7px 0 #FFC107;*/
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
 }
 
-/* Menú (azul en lugar de rosa) */
+/* Efecto adicional para el título */
+header h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, #FF5722, #FFC107, #4CAF50, #2196F3, #9C27B0);
+    border-radius: 3px;
+}
+
+/* Menú (colores de payaso) */
 nav {
-    background-color: #fff;
+    background-color: #FFC107; /* Amarillo brillante */
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -62,13 +94,19 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #4682b4; /* Azul en lugar de rosa */
+    color: #E91E63; /* Rosa fuerte */
     font-weight: bold;
     font-size: 1.2em;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.7);
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #FF5722; /* Naranja */
+    color: white;
+    transform: scale(1.1);
 }
 
 /* Resto del CSS (main, productos, footer, etc.) */
@@ -83,8 +121,8 @@ main {
 }
 
 .product {
-    border: 1px solid #99c2ff; /* Azul claro en lugar de rosa claro */
-    border-radius: 10px;
+    border: 4px dotted #2196F3; /* Azul con borde de puntos */
+    border-radius: 15px;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -95,27 +133,33 @@ main {
 }
 
 .product:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #FFF9C4; /* Amarillo claro */
 }
 
 .product img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    border: 2px solid #E91E63; /* Rosa */
 }
 
 .nombre-producto {
-    font-family: 'Pacifico', cursive;
+    font-family: 'Bubblegum Sans', cursive;
     font-size: 1.5em;
-    color: #1e4b8b; /* Azul oscuro en lugar de rosa oscuro */
+    color: #9C27B0; /* Morado */
     font-weight: normal;
+    background: linear-gradient(to right, #FF5722, #E91E63, #9C27B0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .descripcion {
     text-align: justify;
     font-family: 'Comic Sans MS', cursive;
     font-size: 0.9em;
-    color: #051020; /* Texto más neutro */
+    color: #333;
     font-weight: 400;
     margin: 5px 0;
 }
@@ -123,13 +167,16 @@ main {
 .precio {
     font-family: 'Comic Sans MS', cursive;
     font-size: 1.2em;
-    color: #0e8b0a;
-    font-weight: normal;
+    color: #4CAF50; /* Verde */
+    font-weight: bold;
     margin: 5px 0;
+    background-color: #E8F5E9;
+    padding: 3px;
+    border-radius: 5px;
 }
 
 footer {
-    background-color: #333;
+    background: linear-gradient(135deg, #9C27B0 0%, #2196F3 100%); /* Morado a azul */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -149,16 +196,21 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 .contacto-item img {
     width: 50px;
     height: 50px;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
 }
 
 .derechos {
     font-size: 1.0em;
     margin-top: 15px;
+    color: #FFEB3B; /* Amarillo */
 }
 
 .whatsapp-button {
@@ -166,7 +218,7 @@ footer {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    background-color: #25d366;
+    background: linear-gradient(#25d366, #128C7E);
     border-radius: 50%;
     padding: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -181,12 +233,12 @@ footer {
 }
 
 .whatsapp-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(10deg);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Animación de corbatas flotantes en lugar de corazones */
-@keyframes floatTie {
+/* Animación de juguetes flotantes */
+@keyframes floatToy {
     0% {
         transform: translateY(-10vh) rotate(0deg);
         opacity: 0;
@@ -197,67 +249,65 @@ footer {
     }
 }
 
-.tie {
+.toy {
     position: fixed;
     top: -10vh;
     font-size: 20px;
-    color: #1e4b8b; /* Azul oscuro */
-    animation: floatTie 10s linear infinite;
+    animation: floatToy 10s linear infinite;
     z-index: -1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Usamos el símbolo de corbata (🎩 podría ser sombrero o 👔 para corbata) */
-.tie::before {
-    content: "👔";
-}
+/* Símbolos de juguetes y colores aleatorios */
+.toy:nth-child(1)::before { content: "🧸"; color: #FF5722; }
+.toy:nth-child(2)::before { content: "🚀"; color: #2196F3; }
+.toy:nth-child(3)::before { content: "🎈"; color: #E91E63; }
+.toy:nth-child(4)::before { content: "🎨"; color: #9C27B0; }
+.toy:nth-child(5)::before { content: "⚽"; color: #4CAF50; }
+.toy:nth-child(6)::before { content: "🎮"; color: #FFC107; }
+.toy:nth-child(7)::before { content: "🎯"; color: #FF5252; }
+.toy:nth-child(8)::before { content: "🪀"; color: #00BCD4; }
+.toy:nth-child(9)::before { content: "🎲"; color: #795548; }
+.toy:nth-child(10)::before { content: "🎠"; color: #607D8B; }
 
-/* Posicionamiento aleatorio de las corbatas */
-.tie:nth-child(1) {
+/* Posicionamiento aleatorio de los juguetes */
+.toy:nth-child(1) {
     left: 5%;
     animation-duration: 8s;
 }
-
-.tie:nth-child(2) {
+.toy:nth-child(2) {
     left: 15%;
     animation-duration: 12s;
 }
-
-.tie:nth-child(3) {
+.toy:nth-child(3) {
     left: 25%;
     animation-duration: 10s;
 }
-
-.tie:nth-child(4) {
+.toy:nth-child(4) {
     left: 35%;
     animation-duration: 14s;
 }
-
-.tie:nth-child(5) {
+.toy:nth-child(5) {
     left: 45%;
     animation-duration: 9s;
 }
-
-.tie:nth-child(6) {
+.toy:nth-child(6) {
     left: 55%;
     animation-duration: 11s;
 }
-
-.tie:nth-child(7) {
+.toy:nth-child(7) {
     left: 65%;
     animation-duration: 13s;
 }
-
-.tie:nth-child(8) {
+.toy:nth-child(8) {
     left: 75%;
     animation-duration: 7s;
 }
-
-.tie:nth-child(9) {
+.toy:nth-child(9) {
     left: 85%;
     animation-duration: 15s;
 }
-
-.tie:nth-child(10) {
+.toy:nth-child(10) {
     left: 95%;
     animation-duration: 6s;
 }
@@ -300,7 +350,7 @@ footer {
 }
 
 .back {
-    background-color: #f0f8ff; /* Azul muy claro */
+    background: linear-gradient(135deg, #FFF9C4 0%, #B3E5FC 100%); /* Amarillo claro a azul claro */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -309,6 +359,7 @@ footer {
     padding: 10px;
     text-align: center;
     overflow: auto;
+    border: 2px dashed #E91E63;
 }
 
 /* Media queries para móviles */
@@ -341,18 +392,21 @@ footer {
 
 body h1 {
     margin: 0;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Bubblegum Sans', cursive;
     padding: 15px;
     text-align: center;
+    background: linear-gradient(to right, #FF5722, #E91E63, #9C27B0, #2196F3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Estilos para el banner de promoción - Cambiado a Día del Padre */
+/* Estilos para el banner de promoción - Cambiado a Día del Niño */
 .promo-banner {
     position: fixed;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #1e4b8b; /* Azul oscuro */
+    background: linear-gradient(135deg, #FF5722 0%, #E91E63 50%, #9C27B0 100%);
     color: white;
     padding: 15px 10px;
     border-radius: 10px 0 0 10px;
@@ -368,7 +422,7 @@ body h1 {
 }
 
 .promo-banner:hover {
-    background-color: #0d3a6e; /* Azul más oscuro */
+    background: linear-gradient(135deg, #E91E63 0%, #9C27B0 50%, #2196F3 100%);
     right: 5px;
     padding-right: 15px;
 }
@@ -380,12 +434,13 @@ body h1 {
 }
 
 .promo-cta {
-    background-color: white;
-    color: #1e4b8b; /* Azul oscuro */
+    background-color: #FFEB3B;
+    color: #E91E63;
     padding: 3px 8px;
     border-radius: 5px;
     font-size: 0.9rem;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .promo-arrow {
@@ -413,7 +468,7 @@ body h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: #1e4b8b;
+        background: radial-gradient(circle, #FF5722, #E91E63);
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         cursor: pointer;
     }
@@ -432,7 +487,7 @@ body h1 {
     
     /* Texto centrado */
     .promo-banner::before {
-        content: "PROMO PADRE";
+        content: "¡FIESTA!";
         font-size: 0.9rem;
         font-weight: bold;
         color: white;
@@ -453,7 +508,7 @@ body h1 {
     }
     
     .promo-banner:hover {
-        background-color: #0d3a6e;
+        background: radial-gradient(circle, #E91E63, #9C27B0);
         transform: scale(1.1);
         right: 10px;
         padding-right: 0;
@@ -463,7 +518,6 @@ body h1 {
         0% { transform: translateY(-50%) translateX(0); }
         100% { transform: translateY(-50%) translateX(-5px); }
     }
-    
 }
 
 /*Inicio Carrusel*/
@@ -476,9 +530,12 @@ body h1 {
 }
 
 .destacados-semana h2 { /* Titulo del carrusel */
-    color: #1e4b8b;
+    background: linear-gradient(to right, #FF5722, #E91E63, #9C27B0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 2rem;
     font-size: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 .carrusel {
@@ -488,6 +545,9 @@ body h1 {
     min-width: 300px; /* Ancho mínimo */
     margin: 0 auto; /* Centrado horizontal */
     overflow: hidden;
+    border: 3px solid #FFC107;
+    border-radius: 15px;
+    background-color: #FFF9C4;
 }
 
 .carrusel-inner {
@@ -513,6 +573,7 @@ body h1 {
     max-width: 80%; /* Añade esto para reducir el ancho */
     margin: 0 auto; /* Centra el contenedor */
     border-radius: 10px; /* Opcional: bordes redondeados */
+    border: 2px solid #9C27B0;
 }
 
 .carrusel-item img {
@@ -525,11 +586,11 @@ body h1 {
 }
 
 .carrusel-item:hover img {
-    transform: scale(1.02);
+    transform: scale(1.02) rotate(2deg);
 }
 
 .carrusel-caption { /* descripcion del producto*/
-    background: rgba(71, 60, 231, 0.9); 
+    background: linear-gradient(135deg, #FF5722 0%, #E91E63 100%); 
     color: white;
     padding: 0.3rem;
     font-size: 1.2rem;
@@ -538,6 +599,7 @@ body h1 {
     bottom: 0;
     left: 0;
     right: 0;
+    font-family: 'Bubblegum Sans', cursive;
 }
 
 .carrusel-control { /* flechas carrusel */
@@ -546,7 +608,7 @@ body h1 {
     transform: translateY(-50%);
     background: rgba(255,255,255,0.8);
     border: none;
-    color: #1e4b8b;
+    color: #E91E63;
     font-size: 2rem;
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -558,6 +620,7 @@ body h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid #FFC107;
 }
 
 .carrusel-control.prev {
@@ -569,8 +632,9 @@ body h1 {
 }
 
 .carrusel-control:hover {
-    background: white;
+    background: #FFC107;
     transform: translateY(-50%) scale(1.1);
+    color: white;
 }
 
 /* Indicadores de posición (puntos) */
@@ -585,12 +649,96 @@ body h1 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #ccc;
+    background: #FFC107;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .carrusel-indicador.active { /* colores de indicadores de posición (puntos) */
-    background: #1e4b8b;
+    background: #E91E63;
+    transform: scale(1.3);
 }
 /*Fin Carrusel*/
+
+/* Efectos adicionales para temática infantil */
+@keyframes rainbow {
+    0% {color: #FF5722;}
+    20% {color: #FFC107;}
+    40% {color: #4CAF50;}
+    60% {color: #2196F3;}
+    80% {color: #9C27B0;}
+    100% {color: #E91E63;}
+}
+
+.special-offer {
+    animation: rainbow 3s infinite;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5em;
+    background-color: #FFF9C4;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px dotted #E91E63;
+}
+
+/* Nuevos estilos para el Día del Niño */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    opacity: 0.7;
+    z-index: 9999;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Crear múltiples confetis con colores diferentes */
+.confetti:nth-child(1) { left: 10%; background-color: #FF5722; animation-delay: 0s; }
+.confetti:nth-child(2) { left: 20%; background-color: #FFC107; animation-delay: 1s; }
+.confetti:nth-child(3) { left: 30%; background-color: #4CAF50; animation-delay: 2s; }
+.confetti:nth-child(4) { left: 40%; background-color: #2196F3; animation-delay: 3s; }
+.confetti:nth-child(5) { left: 50%; background-color: #9C27B0; animation-delay: 4s; }
+.confetti:nth-child(6) { left: 60%; background-color: #E91E63; animation-delay: 0.5s; }
+.confetti:nth-child(7) { left: 70%; background-color: #00BCD4; animation-delay: 1.5s; }
+.confetti:nth-child(8) { left: 80%; background-color: #FF9800; animation-delay: 2.5s; }
+.confetti:nth-child(9) { left: 90%; background-color: #8BC34A; animation-delay: 3.5s; }
+.confetti:nth-child(10) { left: 95%; background-color: #673AB7; animation-delay: 4.5s; }
+
+/* Botón especial para el Día del Niño */
+.kids-day-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF5722, #FFC107, #4CAF50, #2196F3, #9C27B0);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+    border: 3px solid white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.kids-day-button:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    animation: rainbow-bg 2s infinite;
+}
+
+@keyframes rainbow-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
